@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Dados pessoais</legend>
+        <!--Parte de dados  -->
+    <form  action="cadastro.php" autocomplete="on" method="post">
+      
+        <p><label for="inome">Nome Completo:</label></br><input type="text" name="nome" id="inome" required  placeholder="Digite seu Nome completo"  size="35" maxlength="30"></p> 
+        <p><label for="itipo">Email:</label></br><input type="text" name="tipo" id="itipo" required placeholder="Ex:Seuemail@exemplo.com"></p>
+        <p><label for="itelefone">Telefone(formato (XX) XXXXX-XXXX):</label></br><input type="text" name="telefone" id="itelefone"  maxlength="12"placeholder="(11) 98104-0375"></p>
+        <p><label for="isenha">Crie uma senha:</label></br><input type="password" name="senha" id="isenha"  maxlength="10" minlenhth="4" placeholder="Digite uma senha" required ></p>
+        <p><label for="idade">Idade:</label></br><input type="number" name="idade" id="idade" placeholder="Sua idade"></p>
+
+          <!-- caixa de estados -->
+    <label for="iest">Estado de Entrega</label>
+    <select name="estado" id="iest">
+        <option value="" selected> --- Selecione seu Estado --- </option>
+        <optgroup label="Região Sudeste">
+            <option value="MG">Minas Geais</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+        </optgroup>
+
+        <optgroup label="Região Nordeste">
+            <option value="MA">Maranhão</option>
+            <option value="PE">Pernambuco</option>
+            <option value="RN">Rio Grande do Norte</option>
+        </optgroup>
+
+        <optgroup label="Região Sul">
+            <option value="PR">Curitiba</option>
+            <option value="RS">Porto Alegre</option>
+            <option value="SC">Joinville </option>
+        </optgroup>
+        <optgroup label="Região Norte">
+            <option value="AM">Manaus </option>
+            <option value="PA">Belém</option>
+            <option value="AC">Rio Branco </option>
+        </optgroup>
+    </select>
+
+        
+
+
+
+</fieldset>
+
+      <!-- input type color
+            É um seletor de cores.
+            value - É utilizado para especificar uma cor padrão
+        -->
+        <p>
+            <label for="icor">Cor:</label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+        </p>
+
+
+
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    
+</body>
+</html>
